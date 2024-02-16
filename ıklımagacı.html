@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İKLİM AĞACI</title>
+    <style>
+        body {
+            background-color: #006400; /* Dark Green */
+            color: #fff; /* White text */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #003300; /* Darker Green */
+            padding: 20px;
+            text-align: center;
+        }
+        #registration-form {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #registration-form h2 {
+            color: #006400; /* Dark Green */
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #006400; /* Dark Green */
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #006400; /* Dark Green */
+            border-radius: 5px;
+        }
+        button {
+            background-color: #006400; /* Dark Green */
+            color: #fff; /* White text */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004d00; /* Darker Green on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>İKLİM AĞACI</h1>
+    </header>
+
+    <div id="registration-form">
+        <h2>İklim Ağacı Üyelik Formu</h2>
+        <form id="signup-form">
+            <label for="email">E-posta Adresi:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="tree-image">Ağaç Fotoğrafı (URL):</label>
+            <input type="url" id="tree-image" name="tree-image" required>
+
+            <button type="button" onclick="registerUser()">Üye Ol</button>
+        </form>
+    </div>
+
+    <script>
+        function registerUser() {
+            var email = document.getElementById('email').value;
+            var treeImage = document.getElementById('tree-image').value;
+
+            // Burada sunucuya kullanıcı bilgilerini göndermek için bir işlem yapılmalıdır.
+            // Bu örnekte sadece console.log ile bilgileri görüntülüyoruz.
+            console.log('E-posta: ' + email);
+            console.log('Ağaç Fotoğrafı: ' + treeImage);
+
+            alert('Üyelik başarıyla oluşturuldu!');
+        }
+    </script>
+</body>
+</html>
